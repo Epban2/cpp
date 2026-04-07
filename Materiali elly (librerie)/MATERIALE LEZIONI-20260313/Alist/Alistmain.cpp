@@ -64,7 +64,7 @@ int main(int argc, char** argv) {
 	
   // Declare some sample lists
   AList<Item> L1;
-  AList<Item> L2;  //TODO: perché dichiara con le parentesi angolari?
+  AList<Item> L2; 
   AList<int> L3; 
 
   Item temp;
@@ -72,13 +72,13 @@ int main(int argc, char** argv) {
   cout << "0) L1: "; lprint(L1);
   L1.moveToStart();
   L1.insert(Item(39)); // ammissibile in C++: è un passaggio di un "oggetto temporaneo"
-  L1.next();			//<39 | >
-  L1.insert(Item(9));   //<39 | 9>
-  L1.insert(Item(5));   //<39 | 5 9>
-  L1.insert(Item(4));   //<39 | 4 5 9>
-  L1.insert(Item(3));   //<39 | 3 4 5 9>
-  L1.insert(Item(2));   //<39 | 2 3 4 5 9>
-  L1.insert(Item(1));   //<39 | 1 2 3 4 5 9>
+  L1.next();
+  L1.insert(Item(9));
+  L1.insert(Item(5));
+  L1.insert(Item(4));
+  L1.insert(Item(3));
+  L1.insert(Item(2));
+  L1.insert(Item(1));
   cout << "1) L1: "; lprint(L1);
   L1.moveToEnd(); 
   cout << "2) L1: "; lprint(L1);

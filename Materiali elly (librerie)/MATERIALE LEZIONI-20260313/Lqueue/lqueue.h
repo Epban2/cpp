@@ -10,7 +10,6 @@
 #define LQUEUE_H
 
 #include <string>
-#include <lstack.h>
 using namespace std;
 
 inline void Assert(bool val, string s);
@@ -20,6 +19,7 @@ inline void Assert(bool val, string s);
 
 // First, get the declaration for the base stack class
 #include "queue.h"
+#include "lstack.h"
 
 // Implementations for linked queue function members
 // Linked queue implementation
@@ -69,15 +69,12 @@ public:
 
   virtual int length() const { return size; }
 
-  //Inverte una coda
   void reverse() {
       LStack<E> stack;
-      while (this->length() > 0) {
+      while (this->length() > 0)
           stack.push(this->dequeue());
-      }
-      while (stack.length() > 0) {
+      while (stack.length() > 0)
           this->enqueue(stack.pop());
-      }
   }
 };
 

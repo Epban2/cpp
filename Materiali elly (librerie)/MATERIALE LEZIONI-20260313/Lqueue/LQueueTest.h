@@ -10,7 +10,6 @@
 #include <cstdlib>
 #include <string>
 #include <time.h>  // Used by timing functions
-#include <lstack.h>
 
 using namespace std;
 

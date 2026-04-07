@@ -80,7 +80,7 @@ public:
     Link<E>* temp = head;
     // March down list until we find the previous element
     while (temp->next!=curr) temp=temp->next;
-    curr = temp; //Dall'inizio va avanti finché il successivo non è l'oggetto current, quindi ritorna l'oggetto (ossia il precedente del corrente)
+    curr = temp;
   }
 
   // Move curr one step right; no change if already at end
@@ -96,7 +96,7 @@ public:
     for (i=0; curr != temp; i++)
       temp = temp->next;
     return i;
-  } // < | | | |!curr | | | >
+  }
 
   // Move down list to "pos" position
   void moveToPos(int pos) {

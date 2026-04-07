@@ -1,3 +1,10 @@
+// From the software distribution accompanying the textbook
+// "A Practical Introduction to Data Structures and Algorithm Analysis,
+// Third Edition (C++)" by Clifford A. Shaffer.
+// Source code Copyright (C) 2007-2011 by Clifford A. Shaffer.
+
+// This is the file to include in your code if you want access to the
+// complete LStack template class
 
 #ifndef LSTACK_H
 #define LSTACK_H
@@ -20,15 +27,13 @@ private:
   Link<E>* top;            // Pointer to first element
   int size;                   // Number of elements
 
-  //COMMENT: RISPETTO ALLO STACK ASTRATTO IN CUI ABBIAMO IL TOP IN FONDO (IN BASSO), QUI è COME SE ANDASSE DA SINISTRA VERSO DESTRA
-
 public:
   LStack()                        // Constructor
     { top = NULL; size = 0; }
 
-  ~LStack() { clear(); }          // CLEAR E DISTRUTTORE SONO PRATICAMENTE LA STESSA COSA (RICHIAMA CLEAR)
+  ~LStack() { clear(); }          // Destructor
 
-  void clear() {                  // RIPORTA ALLO STATO DI LISTA VUOTA
+  void clear() {                  // Reinitialize
     while (top != NULL) {         // Delete link nodes
       Link<E>* temp = top;
       top = top->next;

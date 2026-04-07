@@ -20,7 +20,7 @@ inline void Assert(bool val, string s);
 const int defaultSizeAL = 100; // Default size
 
 template <typename E> // Array-based list implementation
-class AList : public List<E> { //Alist, figlio di List
+class AList : public List<E> {
 private:
   int maxSize;        // Maximum size of list
   int listSize;       // Number of list items now
@@ -31,7 +31,7 @@ public:
   AList(int size=defaultSizeAL) { // Constructor
     maxSize = size;
     listSize = curr = 0;
-    listArray = new E[maxSize]; //Array dinamico
+    listArray = new E[maxSize];
   }
 
   ~AList() { delete [] listArray; } // Destructor

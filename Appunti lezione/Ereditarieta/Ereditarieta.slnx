@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Ereditarieta/Ereditarieta.vcxproj" Id="50257ce4-85dd-4304-9f1a-2a8be04ad5c1" />
+</Solution>

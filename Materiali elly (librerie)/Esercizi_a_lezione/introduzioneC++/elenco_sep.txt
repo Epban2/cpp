@@ -1,0 +1,3 @@
+pinco|pallino|111222
+Matteo|Rossi|333444
+Giuseppe|Garibaldi|467890

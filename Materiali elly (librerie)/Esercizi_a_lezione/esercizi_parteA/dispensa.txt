@@ -1,0 +1,21 @@
+1A3F;Pomodori;23
+0S34;Insalata;15
+0S34;Insalata;5
+F345;Patate;30
+04C3;Carote;18
+04C3;Carote;7
+1267;Salmone;6
+4J78;Salsiccia;16
+4J78;Salsiccia;5
+78F4;Zucchine;4
+01S3;Spaghetti;8
+01S3;Spaghetti;12
+7863;Polpo;5
+89D3;Penne;12
+1793;Pancetta;12
+7894;Pane;30
+7894;Pane;10
+3455;Pan grattato;8
+8967;Cotoletta;2
+8934;Maionese;23
+4DF4;Polenta;1

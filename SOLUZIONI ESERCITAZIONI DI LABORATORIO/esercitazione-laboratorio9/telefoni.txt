@@ -1,0 +1,17 @@
+pal4,BIANCHI Valentina,906049
+palA,CRESCI Riccardo,902267
+pal3,FARTADE Geanina,905849
+pal1,FEDERICI Paolo,906221
+pres,GABBI Annalisa,903663
+tecn1,GRISLERI Paolo,905722
+pal3,MAGRI Paola,905801
+tecn1,MEDICI Paolo,905792
+pal3,MOTTOLA Maurizio,905726
+pal3,NEGRI Giuliana,905796
+pal3,PIANINI Maria Antonietta,904250
+tecn1,PORTA Pier Paolo,905738
+pal3,REBECCHI Paola Teresa,905799
+pres,RONCAI Elena,903660
+pal4,SAIA Francisco,905819
+palA,ZENNA Michele,905751
+pal1,BERTOZZI Massimo,905845

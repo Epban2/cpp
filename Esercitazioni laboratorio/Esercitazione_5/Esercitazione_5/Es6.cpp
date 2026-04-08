@@ -14,9 +14,77 @@
 //Dopo la quarta e ultima iterazione rimane un solo valore che è 75 / (‐9) = -8.3333
 
 #include <iostream> 
+#include <lqueue.h>
+#include <LQueueTest.h>
+
 using namespace std;
 
-int main() {
+// risultati: 1 -> dispari, 0 -> pari
+bool isDispari(int num){
+	return (num % 2) == 1 ? true : false;
+};
 
-	cout << "Ciao";
+int main() {
+	int N = 9;
+	//cout << "Quanti valori inserire? ";
+	//cin >> N;
+	LQueue<float> queue;
+	//while (queue.length() < N) {
+	//	float input;
+	//	cin >> input;
+	//	queue.enqueue(input);
+	//}
+	queue.enqueue(float(4)); queue.enqueue(float(8)); queue.enqueue(float(-2)); queue.enqueue(float(17)); queue.enqueue(float(-3)); queue.enqueue(float(2)); queue.enqueue(float(3)); queue.enqueue(float(21)); queue.enqueue(float(-9));
+	Lqueueprint(queue);
+	cout << endl;
+
+	//se è dispari arrotondo per eccesso
+	int arrotondamento = isDispari(queue.length());
+	// + - * /
+	//somma
+	N+= arrotondamento;N /= 2;
+
+	LQueue<float> piuQ, menoQ, prodQ, divQ;
+	while (piuQ.length() <N ){
+		if (queue.length() == 1)
+			piuQ.enqueue(queue.dequeue());
+		else {
+			float sum = queue.dequeue() + queue.dequeue();
+			piuQ.enqueue(sum);
+		}
+	}
+	Lqueueprint(piuQ);
+	//sottraz
+	N += arrotondamento; N /= 2;
+
+	while (menoQ.length() < N) {
+		if (piuQ.length() == 1)
+			menoQ.enqueue(piuQ.dequeue());
+		else {
+			float sottraz = piuQ.dequeue() - piuQ.dequeue();
+			menoQ.enqueue(sottraz);
+		}
+	}
+	cout << endl;
+	Lqueueprint(menoQ);
+	//prodotto
+	N += arrotondamento; N /= 2;
+
+	while (prodQ.length() < N) {
+		if (menoQ.length() == 1)
+			prodQ.enqueue(menoQ.dequeue());
+		else {
+			float prod= menoQ.dequeue() * menoQ.dequeue();
+			prodQ.enqueue(prod);
+		}
+	}
+	cout << endl;
+	Lqueueprint(prodQ);
+
+	//divisione
+	divQ.enqueue(prodQ.dequeue() / prodQ.dequeue());
+	cout << endl;
+	Lqueueprint(divQ);
+
+	return 0;
 }

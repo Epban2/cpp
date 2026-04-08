@@ -26,26 +26,24 @@ void dimezza(LQueue<E>& newQueue, LQueue<E>& oldQueue, char operation);
 
 
 int main() {
-	cout << "Quanti valori inserire? ";
-	cin >> N;
-	LQueue<float> queue;
-	while (queue.length() < N) {
-		float input;
-		cin >> input;
-		queue.enqueue(input);
-	}
+	//cout << "Quanti valori inserire? ";
+	//cin >> N;
+	LQueue<float> queue1, queue2;
+	//while (queue1.length() < N) {
+	//	float input;
+	//	cin >> input;
+	//	queue1.enqueue(input);
+	//}
 	cout << "Coda iniziale: ";
-	//queue.enqueue(float(4)); queue.enqueue(float(8)); queue.enqueue(float(-2)); queue.enqueue(float(17)); queue.enqueue(float(-3)); queue.enqueue(float(2)); queue.enqueue(float(3)); queue.enqueue(float(21)); queue.enqueue(float(-9));
-	//Lqueueprint(queue);
+	queue1.enqueue(float(4)); queue1.enqueue(float(8)); queue1.enqueue(float(-2)); queue1.enqueue(float(17)); queue1.enqueue(float(-3)); queue1.enqueue(float(2)); queue1.enqueue(float(3)); queue1.enqueue(float(21)); queue1.enqueue(float(-9));
+	Lqueueprint(queue1);
 	std::cout << endl;
 
-	//se è dispari arrotondo per eccesso
-	
-	LQueue<float> piuQ, menoQ, prodQ, divQ;
-	dimezza(piuQ, queue, 's');
-	dimezza(menoQ, piuQ, 'm');
-	dimezza(prodQ, menoQ, 'p');
-	dimezza(divQ, prodQ, 'd');
+	//una si riempie e l'altra si svuota e così via
+	dimezza(queue2, queue1, 's');
+	dimezza(queue1, queue2, 'm');
+	dimezza(queue2, queue1, 'p');
+	dimezza(queue1, queue2, 'd');
 
 	return 0;
 }

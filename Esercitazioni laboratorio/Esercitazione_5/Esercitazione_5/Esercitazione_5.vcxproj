@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Astack;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Lstack;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Llist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Alist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Aqueue;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Lqueue;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\ricca\Desktop\Uni\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Astack;C:\Users\ricca\Desktop\Uni\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Aqueue;C:\Users\ricca\Desktop\Uni\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Lqueue;C:\Users\ricca\Desktop\Uni\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Lstack;C:\Users\ricca\Desktop\Uni\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Alist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Astack;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Lstack;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Llist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Alist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Aqueue;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Lqueue;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -134,8 +134,16 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Es2.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Es3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Es4.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Es5.cpp" />
+    <ClCompile Include="Es6.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

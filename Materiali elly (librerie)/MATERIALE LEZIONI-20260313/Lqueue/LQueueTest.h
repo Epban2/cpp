@@ -24,11 +24,18 @@ public:
   // The following is for those times when we actually
   //   need to get a value, rather than compare objects.
   int key() const { return val; }
+
+  //Confronta l'item stesso con uno passato ( Item1 != Item2) e ritorna un booleano
+  bool operator!=(const Item& other) const {
+	  return this->key() != other.key() ? true : false;
+  }
+
 };
 
 // Let us print out Items easily
 inline ostream& operator<<(ostream& s, const Item& i)
   { return s << i.key(); }
+
 
 
 

@@ -18,73 +18,73 @@
 #include <LQueueTest.h>
 
 using namespace std;
+int N = 9; //dimensione dela coda globale, inizializzo ad un valore manuale per input hardcoded
 
-// risultati: 1 -> dispari, 0 -> pari
-bool isDispari(int num){
-	return (num % 2) == 1 ? true : false;
-};
+//Funzione automatica con le operazioni
+template <typename E>
+void dimezza(LQueue<E>& newQueue, LQueue<E>& oldQueue, char operation);
+
 
 int main() {
-	int N = 9;
-	//cout << "Quanti valori inserire? ";
-	//cin >> N;
+	cout << "Quanti valori inserire? ";
+	cin >> N;
 	LQueue<float> queue;
-	//while (queue.length() < N) {
-	//	float input;
-	//	cin >> input;
-	//	queue.enqueue(input);
-	//}
-	queue.enqueue(float(4)); queue.enqueue(float(8)); queue.enqueue(float(-2)); queue.enqueue(float(17)); queue.enqueue(float(-3)); queue.enqueue(float(2)); queue.enqueue(float(3)); queue.enqueue(float(21)); queue.enqueue(float(-9));
-	Lqueueprint(queue);
-	cout << endl;
+	while (queue.length() < N) {
+		float input;
+		cin >> input;
+		queue.enqueue(input);
+	}
+	cout << "Coda iniziale: ";
+	//queue.enqueue(float(4)); queue.enqueue(float(8)); queue.enqueue(float(-2)); queue.enqueue(float(17)); queue.enqueue(float(-3)); queue.enqueue(float(2)); queue.enqueue(float(3)); queue.enqueue(float(21)); queue.enqueue(float(-9));
+	//Lqueueprint(queue);
+	std::cout << endl;
 
 	//se è dispari arrotondo per eccesso
-	int arrotondamento = isDispari(queue.length());
-	// + - * /
-	//somma
-	N+= arrotondamento;N /= 2;
-
+	
 	LQueue<float> piuQ, menoQ, prodQ, divQ;
-	while (piuQ.length() <N ){
-		if (queue.length() == 1)
-			piuQ.enqueue(queue.dequeue());
-		else {
-			float sum = queue.dequeue() + queue.dequeue();
-			piuQ.enqueue(sum);
-		}
-	}
-	Lqueueprint(piuQ);
-	//sottraz
-	N += arrotondamento; N /= 2;
-
-	while (menoQ.length() < N) {
-		if (piuQ.length() == 1)
-			menoQ.enqueue(piuQ.dequeue());
-		else {
-			float sottraz = piuQ.dequeue() - piuQ.dequeue();
-			menoQ.enqueue(sottraz);
-		}
-	}
-	cout << endl;
-	Lqueueprint(menoQ);
-	//prodotto
-	N += arrotondamento; N /= 2;
-
-	while (prodQ.length() < N) {
-		if (menoQ.length() == 1)
-			prodQ.enqueue(menoQ.dequeue());
-		else {
-			float prod= menoQ.dequeue() * menoQ.dequeue();
-			prodQ.enqueue(prod);
-		}
-	}
-	cout << endl;
-	Lqueueprint(prodQ);
-
-	//divisione
-	divQ.enqueue(prodQ.dequeue() / prodQ.dequeue());
-	cout << endl;
-	Lqueueprint(divQ);
+	dimezza(piuQ, queue, 's');
+	dimezza(menoQ, piuQ, 'm');
+	dimezza(prodQ, menoQ, 'p');
+	dimezza(divQ, prodQ, 'd');
 
 	return 0;
+}
+
+//Implementazione metodo
+template <typename E>
+void dimezza(LQueue<E>& newQueue, LQueue<E>& oldQueue, char operation) {
+	int length = (oldQueue.length() + 1) / 2; //sommo 1 perchè in cpp: (10 + 1 ) / = 5,  (9 + 1) / 2 = 5, pertanto arrotondando per eccesso fuziona solo con i valori dispari (come vogliamo) e quelli pari rimangono tali
+
+	if (oldQueue.length() == 1) {
+		newQueue.enqueue(oldQueue.dequeue()); //se c'è un solo elemento lo metto dentro e basta
+		return;
+	}
+
+	while (newQueue.length() < length) {
+
+		if (oldQueue.length() == 1)
+			newQueue.enqueue(oldQueue.dequeue()); //se c'è un solo elemento lo metto dentro e basta
+		else {
+			E operationResult;
+
+			switch (operation) { // a seconda dell'operazione passata, la svolgo
+			case 's':
+				operationResult = oldQueue.dequeue() + oldQueue.dequeue();
+				break;
+			case 'm':
+				operationResult = oldQueue.dequeue() - oldQueue.dequeue();
+				break;
+			case 'p':
+				operationResult = oldQueue.dequeue() * oldQueue.dequeue();
+				break;
+			case 'd':
+				operationResult = oldQueue.dequeue() / oldQueue.dequeue();
+				break;
+			}
+			newQueue.enqueue(operationResult);
+		}
+	}
+	cout << operation << ": ";
+	Lqueueprint(newQueue);
+	cout << endl;
 }

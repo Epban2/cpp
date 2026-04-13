@@ -15,8 +15,8 @@ template <typename E>
 int equal_queues(LQueue<E>& Q1, LQueue<E>& Q2);
 
 int main() {
-	LQueue<Item> queue1, queue2, queue3, queue4;
-	//q1 != q2, q3==q4
+	LQueue<Item> queue1, queue2, queue3, queue4; //q1 != q2, q3 == q4
+
 	queue1.enqueue(Item(1));queue1.enqueue(Item(3));queue1.enqueue(Item(61));queue1.enqueue(Item(10));
 	
 	queue2.enqueue(Item(4));queue2.enqueue(Item(2));queue2.enqueue(Item(44));queue2.enqueue(Item(25));
@@ -46,8 +46,8 @@ int main() {
 template <typename E>
 int equal_queues(LQueue<E>& Q1, LQueue<E>& Q2)
 {
-	// 0 -> diverse
-	// 1 -> uguali
+	// 0 -> diverse (false)
+	// 1 -> uguali	(true)
 	if (Q1.length() != Q2.length())
 		return 0;
 	while (Q1.length() > 0)

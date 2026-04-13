@@ -12,8 +12,7 @@ int main() {
 	LstackTransfer(LStack<E>& S1, LStack<E>& S2)
 	*/
 	LStack<Item> stack1;
-	Item i1(1), i2(2), i3(3), i4(4), i5(5), i6(6);
-	stack1.push(i1); stack1.push(i2); stack1.push(i3); stack1.push(i4); stack1.push(i5); stack1.push(i6);
+	stack1.push(Item(1));stack1.push(Item(2));stack1.push(Item(3));stack1.push(Item(4));stack1.push(Item(5));stack1.push(Item(6));
 
 	cout << "Stack iniziale: "; Lstackprint(stack1); cout << endl;
 	Reverse(stack1);

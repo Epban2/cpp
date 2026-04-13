@@ -69,6 +69,10 @@ public:
 
   virtual int length() const { return size; }
 
+  /*
+  Inverte una coda utilizzando uno stack
+  Coda-> Pila, Pila->Coda siccome la pila e' LIFO e la coda FIFO, la coda rientra in ordine inverso
+  */
   void reverse() {
       LStack<E> stack;
       while (this->length() > 0)

@@ -13,7 +13,7 @@ int N = 11;
 
 
 template <typename E>
-void lprint(List<E>& L);
+void lprint(List<E>& L); //Siccome Alist non presenta lprint devo farlo a mano
 
 int main() {
 	LStack <Item> stack;
@@ -23,10 +23,9 @@ int main() {
 	stack.push(Item(1));
 	while (stack.length() <= N) {
 		int pop1 = stack.pop().key();
-		int pop2 = stack.pop().key();
-
-		stack.push(Item(pop2));
-		stack.push(Item(pop1));
+		int pop2 = stack.topValue().key();
+		
+		stack.push(Item(pop1)); //reinserisco il valore una volta letto
 		
 		stack.push(Item(pop1 + pop2));
 

@@ -1,5 +1,6 @@
 #ifndef INSERTION_H
 #define INSERTION_H
+//VEDI NEL FILE comp.h PER LE IMPLEMENTAZIONI DEI METODI DI CONFRONTO/SCAMBIO
 
 template <class E>
 void insertion(E a[], int l, int r)

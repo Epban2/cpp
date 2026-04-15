@@ -1,8 +1,8 @@
 // esercizio nuotatori
 
 #include <iostream>
-#include <fstream>
-#include <sstream>
+#include <fstream> //lettura file
+#include <sstream> // token string->int
 #include <cstdlib>
 #include <string>
 #include <time.h>  // Used by timing functions
@@ -60,11 +60,13 @@ int main(int argc, char** argv) {
 	int secondi;
 	int centesimi;
 
+	// fase 1) lettura del file
+	//Siccome il file è del tipo: v1 v2 v3; v4 v5 v6  l'approccio migliore è separare in due sottostringhe (fino a ; e dopo ;)
 	ifstream myfile("50rn.txt");
 	if (myfile.is_open()) {
 		while (getline(myfile, nome, ';')) {
 			getline(myfile, dati);
-			istringstream token(dati);
+			istringstream token(dati); //string->int
 			token >> minuti >> secondi >> centesimi;
 
 			tot_secondi =  (float) ((minuti * 60 * 100) + (secondi * 100) + centesimi) / 100;
@@ -74,10 +76,12 @@ int main(int argc, char** argv) {
 	}
 	myfile.close();
 
+	// fase 2) ordinamento della lista con selectionSort
     cout << "Lnuotatori: "; lprint(Lnuotatori);
 	selectionsort(Lnuotatori);
 	cout << endl << "Lnuotatori: "; lprint(Lnuotatori);
 
+	// fase 3) scrittura su file
 	ofstream myoutput_file("top_ten.txt");
 	Lnuotatori.moveToStart();
 	cout << "best " << best_swimmers << " swimmers" << endl;

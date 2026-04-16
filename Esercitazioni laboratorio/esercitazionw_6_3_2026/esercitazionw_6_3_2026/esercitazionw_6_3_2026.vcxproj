@@ -70,6 +70,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\ricca\Desktop\Uni\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Alist;C:\Users\ricca\Desktop\Uni\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Llist;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -127,9 +130,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="es1.cpp" />
-    <ClCompile Include="es2.cpp" />
-    <ClCompile Include="es4.cpp" />
+    <ClCompile Include="es1_Llistmain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="es2_Alistmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="es2_AlistTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,14 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="es1.cpp">
+    <ClCompile Include="es1_Llistmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="es2.cpp">
+    <ClCompile Include="es2_Alistmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="es4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="es2_AlistTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

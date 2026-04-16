@@ -11,8 +11,8 @@ string reverse_string(string s)
 	if (s.length() == 1)
 		return s;
 	else
-	{
-		sreverse += s[s.length()-1] + reverse_string(s.substr(0, s.length()-1));
+	{												//sottostringa dal primo al penultimo
+		sreverse += s[s.length() - 1] + reverse_string(s.substr(0, s.length() - 1));
 	  return sreverse;
 	}
 }

@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
 	  else if (infissa[i] == ')')
 	  {
 		  do {
-			  temp = S.pop();
+			  temp = S.pop(); //se incontra ( finisce il ciclo (non la vogliamo)
 			  if (temp.key() != '(') Q.enqueue(temp);
 		  } while (temp.key() != '(');
 		  cout << endl;
@@ -61,6 +61,7 @@ int main(int argc, char** argv) {
 	  temp = S.pop();
 	  Q.enqueue(temp);
   }
+  //Al termine lo stack sarà vuoto
 
   cout << endl;
   Lqueueprint(Q);

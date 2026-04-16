@@ -25,6 +25,7 @@ int main(int argc, char** argv) {
   result = gcd(n1,n2);
   cout << "gcd(" << n1 << "," << n2 << ")="<< result << endl;
 
+  //Algoritmo che data una stringa in notazione prefissa, ritorna il risultato
   s1 = "* + 7 * * 4 6 + 8 9 5";
   result = eval(s1,i);
   cout << "eval(" << s1 << ")="<< result << endl;

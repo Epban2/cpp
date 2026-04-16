@@ -42,7 +42,7 @@ int Fibonacci(int i)
   }
 
 
-//versione più efficiente che memorizza risultati calcolati in precedenza
+//versione piï¿½ efficiente che memorizza risultati calcolati in precedenza
 int Fibonacci_opt(int i)
 { static int knownF[100]; //in C++ valori automaticamente inizializzati a 0
   if (knownF[i] != 0) return knownF[i];
@@ -66,28 +66,28 @@ int ackermann(int m, int n)
 	else return ackermann(m - 1, ackermann(m, n - 1));
 }
 
-// funzione per determinare se un numero è pari
+// funzione per determinare se un numero ï¿½ pari
 int is_even(unsigned int n)
 {
-	if (n == 0) return 1;
+	if (n == 0) return 1; //Il numero Ã¨ pari quando il precedente Ã¨ dispari
 	 else return(is_odd(n-1));
 }
 
-// funzione per determinare se un numero è dispari
+// funzione per determinare se un numero ï¿½ dispari
 int is_odd(unsigned int n)
 {
 	return (!is_even(n));
 }
 
 // funzione per calcolare il massimo in un array
-Item max(Item a[], int l, int r)
-  {
-    if (l == r) return a[l];
-    int m = (l+r)/2; 
-    Item u = max(a, l, m);
-    Item v = max(a, m+1, r);
-    if (u.key() > v.key()) return u; else return v;
-  }
+    Item max(Item a[], int l, int r)
+      {
+        if (l == r) return a[l]; //Se i due estremi r==l allora l'array Ã¨ una singola cella e la ritorno
+        int m = (l+r)/2; 
+        Item u = max(a, l, m);
+        Item v = max(a, m+1, r);
+        if (u.key() > v.key()) return u; else return v;
+      }
 
 int somma(int x, int y)
   /* Calcola la somma tra due interi sfruttandone la definizione induttiva. */

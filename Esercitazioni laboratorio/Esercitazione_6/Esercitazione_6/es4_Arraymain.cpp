@@ -28,6 +28,16 @@ eta_max=25 la lista deve contenere gli studenti: Viola 30, Blu 28.3, Rosa 27.3 e
 
 
 int main() {
+	int num_scelti, eta_max;
+	cout << "Inserire il numero di studenti scelti: " << endl;
+	cin >> num_scelti;
+
+	cout << "Inserire l'eta max: " << endl;
+	cin >> eta_max;
+
+
+
+	//lettura file
 	string n_str;
 	int n;
 
@@ -45,21 +55,33 @@ int main() {
 		int eta;
 		float media;
 
-		// Estrae esattamente i tre tipi di dato in ordine.
-		// Il ciclo si ferma da solo quando finisce il file o se c'è un errore di formato!
+
 		int i = 0;
-		while (file >> cognome >> eta >> media) {
+		while (file >> cognome >> eta >> media)
 			studenti[i++] = Studente(cognome, eta, media);
-		}
+
 	}
 
+	//ordinamento
+	insertion(studenti, n);
+	cout << endl << "Classe: " << endl;
 	lprint(studenti, n);
 
 
+	//selezione studenti
+	LList<Studente> lista_studenti;
+	for (int i = 0; i < n && lista_studenti.length() < num_scelti; i++) {
+		if (studenti[i].geteta() < eta_max)
+			lista_studenti.append(studenti[i]);
+
+	}
+
+
+	cout << endl << "Studenti scelti: " << endl;
+	Lprint(lista_studenti);
 
 
 	delete[] studenti;
-
 	file.close();
 	return 0;
 }

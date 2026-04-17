@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{cd28de3a-cdad-4979-99aa-f67423e96d0a}</ProjectGuid>
+    <ProjectGuid>{f23fc981-b182-4377-90c1-8a28dfd45daa}</ProjectGuid>
     <RootNamespace>Esercitazione6</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Alist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Llist;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Llist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Alist;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -131,14 +131,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="agenda.txt" />
-    <Text Include="persone.txt" />
     <Text Include="studenti.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Es1.cpp">
+    <ClCompile Include="es1_Llistmain.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="FileReading.cpp" />
+    <ClCompile Include="es2_Alistmain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="es3_insertionsort.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="es4_Arraymain.cpp" />
+    <ClCompile Include="es4_ArraymainTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="es2_AlistTest.h" />
+    <ClInclude Include="es3_insertionsortTest.h" />
+    <ClInclude Include="es4_ArraymainTest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Esercitazione-laboratorio6.pdf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

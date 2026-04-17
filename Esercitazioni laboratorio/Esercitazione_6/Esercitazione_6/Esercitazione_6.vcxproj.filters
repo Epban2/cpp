@@ -17,14 +17,36 @@
   <ItemGroup>
     <Text Include="agenda.txt" />
     <Text Include="studenti.txt" />
-    <Text Include="persone.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Es1.cpp">
+    <ClCompile Include="es1_Llistmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FileReading.cpp">
+    <ClCompile Include="es2_Alistmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="es3_insertionsort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="es4_Arraymain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="es4_ArraymainTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="es2_AlistTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="es3_insertionsortTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="es4_ArraymainTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Esercitazione-laboratorio6.pdf" />
   </ItemGroup>
 </Project>

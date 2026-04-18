@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f23fc981-b182-4377-90c1-8a28dfd45daa}</ProjectGuid>
-    <RootNamespace>Esercitazione6</RootNamespace>
+    <ProjectGuid>{3a3dc912-38e5-414d-b20c-66a1c63f62d1}</ProjectGuid>
+    <RootNamespace>Parzialepractice</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Llist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Alist;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Astack;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Lstack;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Llist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Alist;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -130,32 +130,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="agenda.txt" />
-    <Text Include="studenti.txt" />
+    <ClCompile Include="es1_Alistmain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="esame_LListmain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="es1_Llistmain.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="es2_Alistmain.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="es3_insertionsort.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="es4.cpp" />
-    <ClCompile Include="es4_Arraymain.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClInclude Include="es1_Alisttest.h" />
+    <ClInclude Include="esame_LListtest.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="es2_AlistTest.h" />
-    <ClInclude Include="es3_insertionsortTest.h" />
-    <ClInclude Include="es4test.h" />
-    <ClInclude Include="es4_ArraymainTest.h" />
+    <Text Include="..\..\..\..\..\..\Downloads\Soluzioni esami-20260418\20Aprile2017_1\biglietti.txt" />
+    <Text Include="..\..\..\..\..\..\Downloads\Soluzioni esami-20260418\20Aprile2017_1\premi.txt" />
+    <Text Include="citta.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Esercitazione-laboratorio6.pdf" />
+    <None Include="..\..\..\..\..\..\Downloads\Soluzioni esami-20260418\20Aprile2017_1\FdP20Aprile2017.pdf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

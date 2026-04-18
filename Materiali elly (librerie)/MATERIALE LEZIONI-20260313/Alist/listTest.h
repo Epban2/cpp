@@ -12,7 +12,7 @@
 #include <time.h>  // Used by timing functions
 using namespace std;
 
-#include "list.h"
+#include <llist.h>
 
 
 // Your basic int type as an object.

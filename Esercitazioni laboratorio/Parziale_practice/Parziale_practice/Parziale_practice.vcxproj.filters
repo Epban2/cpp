@@ -15,41 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="agenda.txt" />
-    <Text Include="studenti.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="es1_Llistmain.cpp">
+    <ClCompile Include="es1_Alistmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="es2_Alistmain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="es3_insertionsort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="es4_Arraymain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="es4.cpp">
+    <ClCompile Include="esame_LListmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="es2_AlistTest.h">
+    <ClInclude Include="es1_Alisttest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="es3_insertionsortTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="es4_ArraymainTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="es4test.h">
+    <ClInclude Include="esame_LListtest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Esercitazione-laboratorio6.pdf" />
+    <Text Include="citta.txt" />
+    <Text Include="..\..\..\..\..\..\Downloads\Soluzioni esami-20260418\20Aprile2017_1\biglietti.txt" />
+    <Text Include="..\..\..\..\..\..\Downloads\Soluzioni esami-20260418\20Aprile2017_1\premi.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\..\Downloads\Soluzioni esami-20260418\20Aprile2017_1\FdP20Aprile2017.pdf" />
   </ItemGroup>
 </Project>

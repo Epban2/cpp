@@ -1,9 +1,8 @@
 #include "List_test.h"
-#include <fstream>
-#include <sstream>
-#include <astack.h>
+#include <fstream>	//ifstream, is_open()
+#include <sstream>	//istringstream
+#include <astack.h> //AStack
 const char SEPARATORE = ',';
-
 
 void selection(LList<Item>& l)
 {

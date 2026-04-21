@@ -55,33 +55,21 @@ int main() {
 	}
 	file.close();
 
-	//stampa: primo biglietto acquistato da Andrea Rossi :155
+	// 2.1) "primo biglietto acquistato da Andrea Rossi :155"
 
-	Item* no_doppioni = new Item[lista_biglietti.length()];
-	int list_length = 0;
-	lista_biglietti.moveToStart();
-	while (lista_biglietti.currPos() < lista_biglietti.length()) {
-		bool found = false;
-		//scorro la lista di appoggio
+	string prev_name = "", prev_surname = "";
 
-		for (int i = 0; i < list_length; i++) {
-			if (no_doppioni[i] == lista_biglietti.getValue())
-			{
-				found = true;
-				break;
-			}
-		}
-		if (!found) // allora posso aggiungerlo alla lista e aumento la dimensione
-			no_doppioni[list_length++] = lista_biglietti.getValue();
+	for (lista_biglietti.moveToStart(); lista_biglietti.currPos() < lista_biglietti.length(); lista_biglietti.next())
+	{
+		Item curr_element = lista_biglietti.getValue();
+		if (curr_element.getNome() != prev_name || curr_element.getCognome() != prev_surname) //se il nome o cognome sono diversi, allora è la prima volta poiché i biglietti con lo stesso nome sono in righe successive
+			cout << "primo biglietto acquistato da " << curr_element;
+		prev_name = curr_element.getNome();
+		prev_surname = curr_element.getCognome();
 
-		lista_biglietti.next();
 	}
 
-	for (int i = 0; i < list_length; i++) {
-		cout << "primo biglietto acquistato da " << no_doppioni[i];
-	}
-	delete[] no_doppioni;
-
+	// 2.2)
 	cout << endl << "Lista ordinata decrescente: " << endl;
 	selection(lista_biglietti);
 	lprint(lista_biglietti);
@@ -95,7 +83,7 @@ int main() {
 		if (lista_biglietti.getValue().getNumeroBiglietto() % 2 != 0)
 			lista_biglietti.remove();
 	}
-	
+
 	for (lista_biglietti.moveToStart(); lista_biglietti.currPos() < lista_biglietti.length(); lista_biglietti.next()) {
 		stack.push(lista_biglietti.getValue());
 	}
@@ -120,7 +108,7 @@ int main() {
 	int stack_length = stack.length();
 	LStack<Item> stack_appoggio;
 	Item primo = stack.pop(), ultimo;
-	
+
 	while (stack.length() > 0) {
 		stack_appoggio.push(stack.pop());
 	}

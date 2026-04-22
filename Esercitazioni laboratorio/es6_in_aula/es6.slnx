@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="es6/es6.vcxproj" Id="95e37a1d-f806-4ec2-b592-e454d9df122e" />
+</Solution>

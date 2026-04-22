@@ -31,10 +31,9 @@ void selection(LList<Item>& l)
 
 	}
 }
-
-
-
 int main() {
+
+
 	// 1)
 	LList<Item> lista_biglietti;
 	ifstream file("bigliettiVenduti.txt");

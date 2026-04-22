@@ -18,8 +18,8 @@ int partition(Item a[], int l, int r)
       { 
         while (a[++i] < v) ;
         while (v < a[--j]) if (j == l) break;
-        if (i >= j) break;
-        exch(a[i], a[j]);
+        if (i >= j) break; //se si sono scambiati esco
+        exch(a[i], a[j]); //altrimenti scambio i valori
       }
     exch(a[i], a[r]);
     return i;

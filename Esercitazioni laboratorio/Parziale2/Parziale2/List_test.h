@@ -3,11 +3,11 @@
 #include <iostream>
 #include <string>
 using namespace std;
-#include <llist.h>
 #include <cstdlib> // rand, srand
 #include <ctime> //time
 
-#include <lstack.h>
+#include "lstack.h"
+#include "llist.h"
 
 class Item {
 

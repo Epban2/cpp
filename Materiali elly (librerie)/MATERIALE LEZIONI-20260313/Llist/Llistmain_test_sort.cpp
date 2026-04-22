@@ -100,9 +100,9 @@ void mergesort(LList<Item>& Lm)
 		if (k % 2) La.append(removed);
 		else Lb.append(removed);
 	}
-	mergesort(La);
+	mergesort(La); //La e Lb sono già state ordinate in modo crescente
 	mergesort(Lb);
-	merge(Lm, La, Lb);
+	merge(Lm, La, Lb); //Le fondo nella lista finale
 }
 
 // Main routine for linked list driver class

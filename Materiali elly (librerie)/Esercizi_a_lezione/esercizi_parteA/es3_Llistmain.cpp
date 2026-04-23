@@ -47,7 +47,7 @@ void selectionsort(List<Item>& L) {
 // Main routine 
 int main(int argc, char** argv) {
 
-  LList<Item> Listarray[N];  
+  LList<Item> Listarray[N];  //Array di liste
 
   for (int i=0; i<N; i++) {
 	  Item temp(i+1);

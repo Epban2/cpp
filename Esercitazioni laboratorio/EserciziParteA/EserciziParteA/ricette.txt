@@ -1,0 +1,4 @@
+2;Insalata di polpo;0S34;2;7863;1
+1;Salmone al forno;1267;1;F345;3
+4;Salsiccia e polenta;4J78;2;4DF4;2
+3;Salsiccia e patatine;4J78;2;F345;2

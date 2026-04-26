@@ -20,14 +20,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="bigliettiVenduti.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="FdP20Aprile2017_2.pdf" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="List_test.h">
+    <ClInclude Include="esame_listTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="bigliettiVenduti.txt" />
   </ItemGroup>
 </Project>

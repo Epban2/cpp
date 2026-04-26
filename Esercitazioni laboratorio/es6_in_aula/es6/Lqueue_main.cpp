@@ -5,21 +5,12 @@
 const int N_UTENTI = 10;
 const int N_MAX_PAGINE = 20;
 
-int main(){
 
-	Item oggetto(1);
-	Item* ptr = &oggetto;
-	cout << ptr->key();
-	cout << (*ptr).key(); // alternativa valida
-
-	return 0;
-}
-
-int main2() {
+int main() {
 	srand(time(NULL));
 
-	int documenti_utente[N_UTENTI+1] = { 0 };
-	int pagine_utente[N_UTENTI+1] = { 0 };
+	int documenti_utente[N_UTENTI + 1] = { 0 };
+	int pagine_utente[N_UTENTI + 1] = { 0 };
 
 	LQueue<Job> joblist;
 	int job_counter = 1; //richiesto dal programma
@@ -58,9 +49,9 @@ int main2() {
 
 	}
 	cout << endl << "Totale pagine stampate: " << totale_pagine_stampate << endl;
-	for (int i = 1; i <= N_UTENTI; i++) 
+	for (int i = 1; i <= N_UTENTI; i++)
 		cout << "Utente: " << i << ", n.Documenti: " << documenti_utente[i] << ", n.pagine stampate: " << pagine_utente[i] << endl;
-	
+
 
 	return 0;
 }

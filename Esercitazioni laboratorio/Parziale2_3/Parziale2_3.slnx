@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Parziale2_2/Parziale2_2.vcxproj" />
+  <Project Path="Parziale2_3/Parziale2_3.vcxproj" />
 </Solution>

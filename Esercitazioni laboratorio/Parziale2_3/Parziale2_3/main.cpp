@@ -28,7 +28,7 @@ void selectionsort(List<Item>& L) {
 		for (int j = i + 1; j < L.length(); j++) {
 			L.moveToPos(j);
 			Item it_temp = L.getValue();
-			if (it_temp.getNumerobiglietto() > min_element.getNumerobiglietto()) //ordine decrescente
+			if (it_temp.getNumerobiglietto() > min_element.getNumerobiglietto())
 			{
 				min_pos = L.currPos();
 				min_element = it_temp;
@@ -45,40 +45,46 @@ int main() {
 	LList<Item> listabiglietti;
 	LStack<Item> stackbiglietti;
 
-	// 1)
-	ifstream filebiglietti("bigliettiVenduti.txt");
-	if (filebiglietti.is_open()) {
+	//155, Andrea, Rossi
+	ifstream file("bigliettiVenduti.txt");
+	if (file.is_open()) {
 		int numero;
-		string nome, cognome, str;
-		while (getline(filebiglietti, str, SEPARATORE)) {
+		string str, nome, cognome;
+		while (getline(file, str, ',')) {
 			istringstream token(str);
 			token >> numero;
-			getline(filebiglietti, nome, SEPARATORE);
-			getline(filebiglietti, cognome);
+			getline(file, nome, ',');
+			getline(file, cognome);
 			listabiglietti.append(Item(numero, nome, cognome));
 		}
-		filebiglietti.close();
+
+		file.close();
 	}
+	else
+		cout << "error opening file" << endl;
+
+	lprint(listabiglietti);
+
 
 	// 2)
-
 	for (listabiglietti.moveToStart(); listabiglietti.currPos() < listabiglietti.length(); listabiglietti.next()) {
+		bool flag = false;
 		if (listabiglietti.currPos() > 0) {
-			Item attuale = listabiglietti.getValue();
 			listabiglietti.prev();
-			if (attuale != listabiglietti.getValue()) //se sono diversi allora lo stampo
-				cout << "primo biglietto acquistato da " << attuale;
+			Item past = listabiglietti.getValue();
 			listabiglietti.next();
+			if (past == listabiglietti.getValue())
+				flag = true;
 		}
-		else //il primo elemento non controlla
-			cout << "primo biglietto acquistato da " << listabiglietti.getValue();
+		if (!flag)
+			cout << "primo biglietto acquistato da " << listabiglietti.getValue().getNome() << " " << listabiglietti.getValue().getCognome() << " : " << listabiglietti.getValue().getNumerobiglietto() << endl;
+
 	}
 
-
-
+	cout << endl << "Selection sort: " << endl;
 	selectionsort(listabiglietti);
-	cout << endl << "Ordine decrescente:" << endl;
 	lprint(listabiglietti);
+
 
 
 	// 3)
@@ -89,42 +95,41 @@ int main() {
 
 	listabiglietti.moveToStart();
 	while (listabiglietti.currPos() < listabiglietti.length()) {
-		if (listabiglietti.getValue().getNumerobiglietto() % 2 == 0) {
+		if ((listabiglietti.getValue().getNumerobiglietto() % 2) != 0) {
+			listabiglietti.remove();
+		}
+		else {
 			stackbiglietti.push(listabiglietti.getValue());
 			listabiglietti.next();
 		}
-		else
-			listabiglietti.remove();
-
 	}
-	cout << endl << "Stack: " << endl;
+	cout << endl << "No dispari: " << endl;
+	lprint(listabiglietti);
+	cout << endl << "stack: " << endl;
 	Lstackprint(stackbiglietti);
-
+	
 	// 4)
 	//Modificare lo stack dei biglietti creato al punto 3 scambiando il primo e l’ultimo elemento.Per
 	//scambiare i due elementi scrivere un algoritmo che utilizzi solamente un secondo stack di appoggio
 	//e variabili di tipo Item.Stampare il contenuto dello stack dopo lo scambio.Nell’esempio
-
+	
 	LStack<Item> stackappoggio;
+
 	Item primo, ultimo;
-	primo = stackbiglietti.topValue();
-	int length = stackbiglietti.length();
-	while (stackappoggio.length() < length) {
+	primo = stackbiglietti.pop();
+	while (stackbiglietti.length() > 0)
 		stackappoggio.push(stackbiglietti.pop());
-	}
 
 	ultimo = stackappoggio.pop();
+
 	stackbiglietti.push(primo);
-	while (stackbiglietti.length() < (length-1)) {
+	while (stackappoggio.length() > 0)
 		stackbiglietti.push(stackappoggio.pop());
-
-	}
-
-	cout << endl << "Primo e ultimo invertiti: " << endl;
 	stackbiglietti.push(ultimo);
-	Lstackprint(stackbiglietti);
-	
-	cout << endl << "That is all.\n";
 
+	cout << endl << "Invertiti primo_ultimo: " << endl;
+	Lstackprint(stackbiglietti);
+
+	
 	return 0;
 }

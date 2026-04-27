@@ -18,10 +18,13 @@ public:
 		this->nome = no;
 		this->cognome = c;
 	}
-
+	
 	string getNome() const { return nome; }
 	string getCognome() const { return cognome; }
 	int getNumerobiglietto() const { return numerobiglietto; }
+
+	friend bool operator == (const Item& i1, const Item& i2); // esempio per accedere direttamente ai campi senza richiedere getter
+
 
 };
 
@@ -29,7 +32,7 @@ inline ostream& operator << (ostream& s, const Item& i) {
 	return s << "(" << i.getNome() << " " << i.getCognome() << ", " << i.getNumerobiglietto() << ")" << endl;
 }
 inline bool operator == (const Item& i1, const Item& i2) {
-	return (i1.getNome() == i2.getNome() && i1.getCognome() == i2.getCognome());
+	return (i1.nome == i2.nome && i1.cognome == i2.cognome);
 }
 
 
@@ -43,11 +46,11 @@ public:
 
 	string getNome() const { return nome; }
 	float getValore() const { return valore; }
-
+	friend ostream& operator << (ostream& s, const Premio& i);
 };
 
-inline ostream& operator << (ostream& s, Premio i) {
-	return s << "(" << i.getNome() << " " << i.getValore() << ")";
+inline ostream& operator << (ostream& s, const Premio& i) {
+	return s << "(" << i.nome << " " << i.valore << ")";
 }
 
 // Assert: If "val" is false, print a message and terminate

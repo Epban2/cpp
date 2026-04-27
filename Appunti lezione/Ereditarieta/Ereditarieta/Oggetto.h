@@ -15,11 +15,10 @@ public:
 		this->val = 0;
 		this->num = 0;
 	}
-	virtual void print() = 0;
+	virtual void print() = 0; // virtual accetta implementazione specializzata dai figli; =0 è la clausola astratta ossia è strettamente richiesto che i figli implementino il metodo
 
-
-	int getnum() { return this->num; }
-	int getval() { return this->val; }
+	int getnum() { return num; }
+	int getval() { return val; }
 };
 
 class Automobile : public Oggetto {

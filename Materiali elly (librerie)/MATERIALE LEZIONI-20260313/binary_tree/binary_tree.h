@@ -33,15 +33,15 @@ private:
 	// inserimento di un elemento nell'albero binario
     void Insert(T newData, Node<T>* &theRoot)
         {
-            if(theRoot == NULL)
+            if(theRoot == NULL) //Se la radice è nulla
             {
-                theRoot = new Node<T>(newData);
+                theRoot = new Node<T>(newData); //devo allocare un nuovo nodo che diventa la radice
                 return;
             }
 
             if(newData < theRoot->data)
                 Insert(newData, theRoot->lChildptr);
-            else
+            else\
                 Insert(newData, theRoot->rChildptr);
         }
 
@@ -58,7 +58,7 @@ private:
         }
 
 	// attraversamento pre-order non ricorsivo
-	void traverse_preorder_NR(Node<T>* theRoot)
+	void traverse_preorder_NR(Node<T>* theRoot) //Versione non ricorsiva, deve però utilizzare uno stack
      { 
 	  LStack<Node<T>*> s;
       s.push(theRoot);
@@ -72,7 +72,7 @@ private:
      }
 
 	// attraversamento level-order (chiamato anche in ampiezza)
-	void traverse_levelorder_NR(Node<T>* theRoot)
+	void traverse_levelorder_NR(Node<T>* theRoot) 
      { 
       LQueue<Node<T>*> q;
       q.enqueue(theRoot);
@@ -100,6 +100,7 @@ private:
          if (u > v) return u+1; else return v+1;
         }
 
+     // divide et impera
 	 Node<T>* max(T a[], int l, int r)
 		{
 		 int m = (l+r)/2;

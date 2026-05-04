@@ -18,6 +18,26 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="esercitazione7_es1_binaryTree.h" />
+    <ClInclude Include="esercitazione7_es1_listTest.h" />
+    <ClInclude Include="esercitazione7_es2_binaryTree.h" />
+    <ClInclude Include="esercitazione7_es2_listTest.h" />
+    <ClInclude Include="esercitazione7_es3_binaryTree.h" />
+    <ClInclude Include="esercitazione7_es4_binaryTree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="esercitazione7_es1_binaryTreeMain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="esercitazione7_es2_binaryTreeMain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="esercitazione7_es3_binaryTreeMain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="esercitazione7_es4_binaryTreeMain.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -71,7 +91,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ExternalIncludePath>C:\Users\ricca\Desktop\Uni\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\binary_tree;$(ExternalIncludePath)</ExternalIncludePath>
+    <ExternalIncludePath>C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Llist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Lstack;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Lqueue;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Aqueue;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Astack;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Alist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\binary_tree;C:\Users\ricca\Desktop\Uni\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\binary_tree;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -129,12 +149,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Source1.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="bstTest1.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

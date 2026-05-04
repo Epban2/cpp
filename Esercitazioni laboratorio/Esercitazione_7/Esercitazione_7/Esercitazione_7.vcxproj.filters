@@ -15,13 +15,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="bstTest1.h">
+    <ClInclude Include="esercitazione7_es1_listTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="esercitazione7_es1_binaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="esercitazione7_es2_binaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="esercitazione7_es2_listTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="esercitazione7_es3_binaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="esercitazione7_es4_binaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="esercitazione7_es1_binaryTreeMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="esercitazione7_es2_binaryTreeMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="esercitazione7_es3_binaryTreeMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="esercitazione7_es4_binaryTreeMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

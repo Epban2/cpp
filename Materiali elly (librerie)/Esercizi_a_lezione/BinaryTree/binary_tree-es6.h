@@ -113,6 +113,7 @@ private:
 		 int maxw = 0;
 		 while (q.length() != 0)
 		 {
+             //In questo momento del codice, la coda ha accesso a tutti i nodi ad un certo livello, pertanto rimuovendo le tre righe sottostanti, si può usare questo scheletro per tutti i gli esercizi che richiedono delle informazioni per ogni livello
 			 int curlevelw = q.length();
 			 if (curlevelw  > maxw)
 				 maxw = curlevelw;

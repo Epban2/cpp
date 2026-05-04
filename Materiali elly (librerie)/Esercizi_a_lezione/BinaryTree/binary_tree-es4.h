@@ -130,7 +130,7 @@ private:
 		 }
 	 }
 
-	 
+
 /*
 	 void internal_path_length(Node<T>* theRoot, int depth)
 	 {

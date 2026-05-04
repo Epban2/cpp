@@ -10,7 +10,7 @@ using namespace std;
 int main(int argc, char** argv) {
   
   BinaryTree<Item> myBT;
-  Item it1(74);
+  Item it1(74); //Radice
   myBT.AddItem(it1);
   Item it2(45);
   myBT.AddItem(it2);

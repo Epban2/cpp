@@ -114,7 +114,7 @@ private:
 		 else if (theRoot->lChildptr == NULL && theRoot->rChildptr == NULL)
 			 return 1;
 		 else if (test_children_number(theRoot->lChildptr) && test_children_number(theRoot->rChildptr))
-			 return 1;
+			 return 1; //Ricorsivamente richiama la funzione ritornando 1 (true) se tutto il sottoalbero sx e dx hanno 0 o 2 figli
 		 else  return 0;
 	 }
 

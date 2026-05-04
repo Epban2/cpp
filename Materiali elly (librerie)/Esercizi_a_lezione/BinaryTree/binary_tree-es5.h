@@ -120,6 +120,7 @@ private:
 			{
 				q.enqueue(tempNode->lChildptr);
 			}
+
 			if (tempNode->rChildptr == NULL)
 			{
 				tempNode->rChildptr = new Node<T>(newData);

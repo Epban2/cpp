@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
     
     aPQ<int> priorityq(10);
 	//PQ<int> priorityq(10);
-
+	
 	priorityq.insert(5);
 	priorityq.insert(50);
 	priorityq.insert(12);

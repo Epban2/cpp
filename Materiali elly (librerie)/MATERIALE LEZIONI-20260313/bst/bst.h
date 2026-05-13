@@ -58,9 +58,9 @@ class BST
 	  // inserimento in radice
 	  void insert_rootR(link& h, Item x)
         { if (h == 0) { h = new node(x); return; }
-          if (x.key() <  h->item.key()) 
+          if (x.key() <  h->item.key())  // se è minore inserisce e poi ruota a dx
            { insert_rootR(h->l, x); rotR(h); }
-          else { insert_rootR(h->r, x); rotL(h); }
+          else { insert_rootR(h->r, x); rotL(h); } // altrimenti inserisce a destra e ruota a sinistra
          }
 
 	  // restituisce il k-mo elemento con chiave minore dell'albero

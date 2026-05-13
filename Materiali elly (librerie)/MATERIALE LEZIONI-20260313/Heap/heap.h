@@ -18,7 +18,8 @@ class aPQ
       aPQ(int maxN)
         { pq = new Item[maxN]; N = 0; }
 	  ~aPQ() { delete[] pq; } // Destructor
-      int empty() const
+      // isEmpty(), ritorna 1 se piena; 0 altrimenti
+	  int empty() const
         { return N == 0; }
 	  // inserisce un elemento
       void insert(Item item)

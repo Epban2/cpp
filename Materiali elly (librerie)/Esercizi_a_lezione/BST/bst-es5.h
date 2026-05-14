@@ -30,7 +30,7 @@ class BST
         }
       void insertR(link& h, Item x)
         { if (h == 0) { h = new node(x); return; }
-          if (x.key() < h->item.key()) 
+          if (x.key() < h->item.key())
                insertR(h->l, x);
           else insertR(h->r, x);
         }
@@ -165,11 +165,11 @@ class BST
 	  Item find_closest_tomean(float mean)
 	  {
 		  link closest = NULL;
-		  link curnode = head;
+		  link curnode = head; //inizializza la radice
 		  int minDistance = fabs(curnode->item.key() - mean);
 		  while (curnode != NULL) {
 			  float distance = fabs(curnode->item.key() - mean);
-			  if (distance < minDistance) {
+			  if (distance < minDistance) { //se trovo un nodo più vicino alla media di quello attuale
 				  minDistance = distance;
 				  closest = curnode;
 			  }

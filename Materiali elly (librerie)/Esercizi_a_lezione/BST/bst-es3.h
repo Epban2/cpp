@@ -189,7 +189,7 @@ class BST
 					  cout << "predecessore:" << predecessor << endl;
 					  L1.next();
 				  }
-				  if (L1.currPos()<(L1.length()-1)) 
+				  if (L1.currPos()<(L1.length()-1))  //se non siamo in ultima posizione, avanzo e prendo il successivo (maggiore della key)
 				  {
 					  L1.next();
 					  successor = L1.getValue();

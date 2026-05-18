@@ -1,0 +1,21 @@
+159305,Barsotti Chiarapaola,28,chiarapaola.barsotti@studenti.unipr.it
+171829,Balletti Caterina,18,caterina.balletti@studenti.unipr.it
+150844,Agazzi Antonella,25,antonella.agazzi@studenti.unipr.it
+215391,Baron Paola,21,paola.baron@studenti.unipr.it
+151012,Agostinelli Sara,25,sara.agostinelli@studenti.unipr.it
+151016,Bacciolo Franco,30,franco.bacciolo@studenti.unipr.it
+170286,Alberti Romano,28,romano.alberti@studenti.unipr.it
+150755,Aldreghetti Ivano,24,ivano.aldreghetti@studenti.unipr.it
+150961,Aere Renato,30,renato.aere@studenti.unipr.it
+159208,Ambrosetto Francesco,26,francesco.ambrosetto@studenti.unipr.it
+173178,Alberici Maurizio,INSUFFICIENTE,maurizio.alberici@studenti.unipr.it
+157920,Aube Michele,INSUFFICIENTE,michele.aube@studenti.unipr.it
+151315,Avicolli Franco,28,franco.avicolli@studenti.unipr.it
+171636,Bacciolo Davide,24,davide.bacciolo@studenti.unipr.it
+158965,Armellin Paola,26,paola.armellin@studenti.unipr.it
+159936,Balsamo Maurizio,27,maurizio.balsamo@studenti.unipr.it
+151031,Alzetta Boschian Daniela,29,daniela.alzettaboschian@studenti.unipr.it
+191831,Barbazza Patrizia,29,patrizia.barbazza@studenti.unipr.it
+171096,Baldessarri Patrizia,21,patrizia.baldessarri@studenti.unipr.it
+192059,Barbirato Paola,25,paola.barbirato@studenti.unipr.it
+150920,Barbero Luigia,30,luigia.barbero@studenti.unipr.it

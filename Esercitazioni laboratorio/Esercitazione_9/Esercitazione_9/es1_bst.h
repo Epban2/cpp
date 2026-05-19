@@ -50,13 +50,14 @@ private:
 		else insertR(h->r, x);
 	}
 
+	//Post order (left, right, root)
 	void showR(link h, ostream& os)
 	{
 		if (h == 0) return;
 
-		h->item.show(os);
 		showR(h->l, os);
 		showR(h->r, os);
+		h->item.show(os);
 	}
 
 	void rotR(link& h)

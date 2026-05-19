@@ -7,7 +7,7 @@
 using namespace std;
 
 #include <stdlib.h>
-#include "es2_classItem.h"
+#include "es3_classItem.h"
 #include "llist.h"
 #include "es1_listTest.h"
 #include "link.h"
@@ -17,6 +17,8 @@ template <class Item, class Key>
 class BST
 {
 private:
+	int somma = 0;
+	int count = 0;
 	// definizione di una struttura dati per rappresentare i nodi dell'albero
 	struct node
 	{
@@ -50,13 +52,13 @@ private:
 		else insertR(h->r, x);
 	}
 
-	//in-order (left, root, right)
+	//Pre order (root, left, right)
 	void showR(link h, ostream& os)
 	{
 		if (h == 0) return;
 
-		showR(h->l, os);
 		h->item.show(os);
+		showR(h->l, os);
 		showR(h->r, os);
 	}
 
@@ -209,6 +211,32 @@ private:
 
 	}
 
+	/*
+	effettui un attraversamento di uno dei due alberi e per ogni nodo visitato:
+	i. ricerchi la matricola corrispondente nel secondo albero
+	ii. calcoli il risultato complessivo dei due esami dello studente come media algebrica dei due
+	risultati assegnando a INSUFFICIENTE il valore 0
+	iii. stampi il valore medio se sufficiente (>=18) oppure INS se insufficiente (<18)
+	*/
+	void visitaAlberoR(link h, BST& bst) {
+		if (h == NULL) return;
+		visitaAlberoR(h->l, bst);
+		int media = (h->item.getData() + bst.search(h->item.key()).getData()) / 2;
+		if (media >= 18) cout << h->item.key() << ": " << media << endl;
+		else cout << h->item.key() << ": " << "INS" << endl;
+		visitaAlberoR(h->r, bst);
+	}
+
+	void mediaSufficientiR(link h) {
+		if (h == NULL) return;
+		mediaSufficientiR(h->l);
+		if (h->item.getData() >= 18) {
+			somma += h->item.getData();
+			count++;
+		}
+		mediaSufficientiR(h->r);
+
+	}
 
 public:
 	BST()
@@ -267,6 +295,20 @@ public:
 	void merge(LList<Item>& lista) { mergeR(head, lista); }
 	int tree_size() {
 		return tree_size(head);
+	}
+
+	/*
+	effettui un attraversamento di uno dei due alberi e per ogni nodo visitato:
+	i. ricerchi la matricola corrispondente nel secondo albero
+	ii. calcoli il risultato complessivo dei due esami dello studente come media algebrica dei due
+	risultati assegnando a INSUFFICIENTE il valore 0
+	iii. stampi il valore medio se sufficiente (>=18) oppure INS se insufficiente (<18)
+	*/
+	void visitaAlbero(BST& bst) { visitaAlberoR(head, bst); }
+
+	int mediaSufficienti() {
+		mediaSufficientiR(head);
+		return somma / count;
 	}
 };
 

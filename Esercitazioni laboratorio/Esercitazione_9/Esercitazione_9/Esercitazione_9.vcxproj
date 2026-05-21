@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Llist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Alist;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\ricca\Desktop\Uni\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Llist;C:\Users\ricca\Desktop\Uni\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Alist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Llist;C:\Users\Epban\Desktop\Universita\cpp\Materiali elly %28librerie%29\MATERIALE LEZIONI-20260313\Alist;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

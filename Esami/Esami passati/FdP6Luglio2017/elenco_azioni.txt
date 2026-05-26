@@ -1,0 +1,9 @@
+8
+eni A 35
+airbus B 2
+fca B 76
+tiscali C 55
+barilla D 35
+edison A -20
+rcs C -135
+telecom C 44

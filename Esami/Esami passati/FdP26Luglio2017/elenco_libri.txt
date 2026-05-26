@@ -1,0 +1,15 @@
+non valido/25/ed4/37
+libro1/1786/ed12/155
+non valido/88/ed4/12
+libro2/12/ed2/30
+libro0/1000/ed4/711
+non valido/19/ed3/8
+libro0/1001/ed4/710
+libro1/286/ed2/90
+libro2/3/ed4/44
+non valido/987/ed3/21
+libro3/71/ed1/100
+libro1/500/ed3/49
+libro1/285/ed2/66
+non valido/651/ed5/29
+non valido/652/ed1/62

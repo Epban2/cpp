@@ -1,0 +1,30 @@
+Il Messaggero,62.466,Rome,1878
+Il Gazzettino,43.661,Venice,1887
+La Nazione,36.468,Florence,1859
+Dolomiten,31.762,Bolzano,1882
+L'Eco di Bergamo,28.770,Bergamo,1880
+L'Unione Sarda,26.284,Cagliari,1889
+Messaggero Veneto,26.043,Udine,1946
+Il Mattino,23.966,Naples,1892
+Il Secolo XIX,21.964,Genoa,1886
+Gazzetta di Parma,21.207,Parma,1735
+La Nuova Sardegna,19.529,Sassari,1891
+L'Adige,18.787,Trento,1945
+L'Arena,18.644,Verona,1866
+Il Tirreno,17.911,Livorno,1877
+Il Giorno,17.202,Milan,1956
+La Provincia,13.207,Como,1892
+Il Piccolo,12.959,Trieste,1881
+Gazzetta di Mantova,11.634,Mantua,1664
+Il Mattino di Padova,10.378,Padua,1978
+Gazzetta del Sud,9.143,Messina,1952
+Corriere Adriatico,1.139,Ancona,1860
+La Sicilia,7.633,Catania,1945
+Alto Adige,7.367,Bolzano,1945
+Il Tempo,7.260,Rome,1944
+Il Centro,7.000,Pescara,1986
+La Provincia Pavese,6.757,Pavia,1879
+Giornale di Sicilia,6.240,Palermo,1860
+Gazzetta di Modena,5.500,Modena,1859
+La Nuova Venezia,7.595,Venice,1978
+La Nuova Ferrara,4.066,Ferrara,1989

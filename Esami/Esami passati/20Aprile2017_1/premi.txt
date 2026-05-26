@@ -1,0 +1,7 @@
+Lingotto 1000
+Coppa    800
+Medaglia 600
+Targa    400
+Spilla   100
+Cesto    50
+Fiori    10

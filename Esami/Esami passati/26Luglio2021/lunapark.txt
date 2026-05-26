@@ -1,0 +1,28 @@
+1;Kingda Ka;United States;127.2
+2;Top Thrill Dragster;United States;120.1
+3;Superman;United States;100.2
+4;Fury 325;United States;98.8
+5;Steel Dragon 2000;Japan;93.5
+6;Leviathan;Canada;93.4
+7;Intimidator 305;United States;91.1
+8;Millennium Force;United States;91.5
+9;Orion;United States;91.6
+10;Superman 2;United States;126.7
+11;Red Force;Spain;112.0
+12;T Express;South Korea;56.0
+13;Wildfire;Sweden;56.0
+14;El Toro;United States;55.5
+15;Goliath;United States;50.6
+16;Colossos;Germany;50.8
+17;The Voyage;United States;48.9
+18;Hades 360;United States;41.2
+19;Wodan Timbur Coaster;Germany;40.0
+20;Le Monstre;Canada;39.9
+21;American Eagle;United States;39.1
+22;Outlaw Run;United States;49.4		
+23;The Boss;United States;46.3
+24;The Beast;United States;43.8
+25;Formula Rossa;United Arab Emirates;55.5
+26;Do-Dodonpa;Japan;79.9
+27;Red Force 2;Spain;69.9
+28;Ring Racer;Germany;49.4

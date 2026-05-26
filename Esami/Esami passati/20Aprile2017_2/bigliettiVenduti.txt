@@ -1,0 +1,17 @@
+155,Andrea,Rossi
+500,Andrea,Rossi
+501,Andrea,Rossi
+502,Andrea,Rossi
+503,Andrea,Rossi
+12,Marco,Venturi
+23,Francesco,Fabbri
+2000,Francesco,Fabbri
+2001,Francesco,Fabbri
+2002,Francesco,Fabbri
+297,Elena,Giannini
+550,Elena,Giannini
+551,Elena,Giannini
+83,Ion,Chen
+1342,Marco,Carretta
+2003,Giulio,Rossi
+2004,Giulio,Rossi

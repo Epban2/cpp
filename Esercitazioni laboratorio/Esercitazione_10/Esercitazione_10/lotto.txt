@@ -1,0 +1,5 @@
+Bari	     9	40	47	26	49
+Cagliari	34	64	43	78	31
+Firenze	    45	32	17	65	37
+Genova	    65	10	81	28	29
+Milano	    59	46	84	58	3

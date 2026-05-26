@@ -50,6 +50,6 @@ int main()
 			cout << (*it2) << " ";
 		cout << endl;
 	}
-
+	
 	return 0;
 }

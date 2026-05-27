@@ -45,15 +45,14 @@ void prossimo_quotidiano(LQueue<Item>& Q, const string& s) {
 	int counter = 0;
 	while (Q.length() > 0) {
 		Item i = Q.dequeue();
-		if (counter == 2) {
+		if (counter == 2 && trovato) {
 			cout << "Q3: terzo elemento dopo " << s << " :" << i << endl;
-			break;
+			return;
 		}
-		
-		else 
+
+		else if (trovato)
 		{
 			counter++;
-			cout << counter << ", ";
 		}
 
 		if (i.getNome() == s) {
@@ -124,13 +123,6 @@ int main()
 	Dopo l’inserimento scrivere un algoritmo che scorra la lista L1 e
 	che sposti in testa in L1 tutti gli elementi con <anno> strettamente maggiore
 	di 1886 e strettamente minore di 1952. Stampare L1.
-	Q2: stampa list(Il Tempo, 7.26, Rome, 1944) (Alto Adige, 7.367, Bolzano, 1945) (La Sicilia, 7.633, Catania, 1945) (La Provincia, 13.207, Como, 1892)
-	(L'Adige,18.787,Trento,1945) (La Nuova Sardegna,19.529,Sassari,1891) (Il Mattino,23.966,Naples,1892) (Messaggero Veneto,26.043,Udine,1946)
-	(L'Unione Sarda,26.284,Cagliari,1889) (Il Gazzettino,43.661,Venice,1887) (Il Messaggero,62.466,Rome,1878) (La Nazione,36.468,Florence,1859)
-	(Dolomiten, 31.762, Bolzano, 1882) (L'Eco di Bergamo,28.77,Bergamo,1880) (Il Secolo XIX,21.964,Genoa,1886) (Gazzetta di
-	Parma, 21.207, Parma, 1735) (L'Arena,18.644,Verona,1866) (Il Tirreno,17.911,Livorno,1877) (Il Giorno,17.202,Milan,1956) (Il
-	Piccolo, 12.959, Trieste, 1881) (Gazzetta di Mantova, 11.634, Mantua, 1664) (Il Mattino di Padova, 10.378, Padua, 1978) (Gazzetta del
-	Sud, 9.143, Messina, 1952) (La Nuova Venezia, 7.595, Venice, 1978)
 	*/
 
 	list<Item> L1;
@@ -145,15 +137,19 @@ int main()
 	}
 
 	//sposto in testa tutti gli elementi con <anno> strettamente maggiore di 1886 e strettamente minore di 1952
-	for (list<Item>::iterator it = L1.begin(); it != L1.end(); it++) {
+
+	for (list<Item>::iterator it = L1.begin(); it != L1.end();) {
 		Item i = (*it);
 		if (i.getAnno() > 1886 && i.getAnno() < 1952) {
 			L1.push_front(i);
 			it = L1.erase(it);
 		}
+		else
+			it++;
+		//Poiché erase sposta in avanti di uno il puntatore a causa della cancellazione, va rimossa dalla condizione del for l'incremento automatico e gestito manualmente (avremmo altrimenti un incremento di 2 quando sposta in avanti)
 	}
 
-	cout << endl << endl;
+	cout << endl << endl << "Q2)\n";
 	//stampo la lista
 	for (list<Item>::iterator it = L1.begin(); it != L1.end(); it++) cout << *it;
 
@@ -168,13 +164,21 @@ int main()
 	Q3: terzo elemento dopo Il Tempo: nessuno
 	*/
 	cout << endl << endl;
-	LQueue<Item> Q2,Q3;
+	LQueue<Item> Q2, Q3;
+
 	copiaCoda(Q1, Q2);
 	copiaCoda(Q1, Q3);
-	prossimo_quotidiano(Q2,"Il Tirreno");
-	prossimo_quotidiano(Q3,"Il Tempo");
+	prossimo_quotidiano(Q2, "Il Tirreno");
+	prossimo_quotidiano(Q3, "Il Tempo");
 
 
+	//Q4)
+	albero_quotidiani.editMaxKey();
+	albero_quotidiani.editMiddleValue();
+	cout << "\n\nQ4)" << endl;
+	albero_quotidiani.show(cout);
+
+	cout << endl;
 	return 0;
 
 }

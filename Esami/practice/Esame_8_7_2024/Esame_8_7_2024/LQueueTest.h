@@ -32,12 +32,12 @@ public:
 	int getAnno() const { return anno; }
 	string getNome() const { return nome; }
 	string key() const { return keyval; }
-	
+	void setNome(string n) { nome = n; }
 	void show(ostream& os = cout) { cout << "(" << nome << "," << tiratura << "," << keyval << "," << anno << ")  "; }
 };
 
 inline ostream& operator << (ostream& os, const Item& i) {
-	return os << "(" << i.getNome() << "," << i.getTiratura() << "," << i.key() << "," << i.getAnno() << ")  ";
+	return os << "(" << i.getNome() << "," << i.getTiratura() << "," << i.key() << "," << i.getAnno() << ") ";
 }
 
 

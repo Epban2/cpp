@@ -1,0 +1,13 @@
+noci  8  50
+pasta  3  7
+formaggio  2  15
+pane 1 10
+insalata  4  100
+pizza  5  15
+mele  6  16
+ciliegie  7  22
+pane  1  20
+formaggio  2  5
+mele  6  20
+pasta  3  5
+pane 1 15

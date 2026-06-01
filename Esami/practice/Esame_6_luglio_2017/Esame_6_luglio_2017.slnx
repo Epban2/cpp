@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Esame_6_luglio_2017/Esame_6_luglio_2017.vcxproj" />
+</Solution>

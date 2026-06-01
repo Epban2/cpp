@@ -1,0 +1,6 @@
+edison 70
+rcs -15
+airbus -200
+fca 4
+barilla 100
+airbus 500

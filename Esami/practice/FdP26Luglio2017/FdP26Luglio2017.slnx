@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="FdP26Luglio2017/FdP26Luglio2017.vcxproj" />
+</Solution>

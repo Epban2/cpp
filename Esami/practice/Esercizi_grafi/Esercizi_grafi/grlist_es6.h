@@ -149,7 +149,7 @@ public:
 	void complement() {
 		List<Edge>** listaComplementare = (List<Edge>**) new List<Edge>*[numVertex];// inizializzo l'array
 		for (int i = 0; i < numVertex; i++)
-			listaComplementare[i] = new LList<Edge>(); //creo le liste 
+			listaComplementare[i] = new LList<Edge>(); //creo le liste FONDAMENTALE
 
 		for (int i = 0; i < numVertex; i++) {
 			for (int j = 0; j < numVertex; j++) {

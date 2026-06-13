@@ -27,6 +27,15 @@
     <ClCompile Include="es3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="es4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="es5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="es6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="es-grafi.pdf" />
@@ -56,6 +65,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="grlist_es3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grlist_es5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grlist_es6.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

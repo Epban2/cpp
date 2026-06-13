@@ -151,7 +151,16 @@
     <ClCompile Include="es2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="es3.cpp" />
+    <ClCompile Include="es3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="es4.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="es5.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="es6.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="es-grafi.pdf" />
@@ -165,6 +174,8 @@
     <ClInclude Include="grlist.h" />
     <ClInclude Include="grlist_es2.h" />
     <ClInclude Include="grlist_es3.h" />
+    <ClInclude Include="grlist_es5.h" />
+    <ClInclude Include="grlist_es6.h" />
     <ClInclude Include="grmat.h" />
     <ClInclude Include="grmat_es1.h" />
   </ItemGroup>

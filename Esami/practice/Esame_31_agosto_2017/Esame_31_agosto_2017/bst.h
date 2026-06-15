@@ -157,20 +157,12 @@ private:
 		balanceR(h->r);
 	}
 
-	/*
-	int height(link h)
-	{
-		if (h == 0) return -1;
-		int u = height(h->l), v = height(h->r);
-		if (u > v) return u + 1; else return v + 1;
-	}
-	*/
-
+	//Variabile privata della classe che contiene la somma dei figli a sinistra
 	int sum = 0;
 	int returnLeftKeysR(link& h) {
 		if (h == 0) return 0;
 
-		if (h->l->l == 0 && h->l->r == 0) {
+		if (h->l->l == 0 && h->l->r == 0) { //se i figli destro e sinistro del figlio non ci sono -> allora e' una foglia
 			cout << h->l->item.key()<<" ";
 			sum += h->l->item.key();
 		}

@@ -67,7 +67,7 @@ int main()
 			tokencodice >> codice;
 
 			Libro l(nome, editore, prezzo, codice);
-			if (nome != "non valido")
+			if (nome != "non valido") // 2)
 				libri.append(l);
 			else
 				tree.insert(l);
@@ -113,7 +113,7 @@ int main()
 				break; //se era il primo (ultima iterazione) allora è finito e non decremento
 			libri.prev();
 		}
-		else
+		else // e' stato trovato -> devo eliminarlo
 		{
 			int pos = libri.currPos();
 
